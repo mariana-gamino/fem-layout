@@ -1,21 +1,44 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	border: 1px dotted red;
+  /*
+		The ul is the FLEX CONTAINER
+		It is in charge of:
+		- Distributing the items inside it in space (what order they are going to go in broadly)
+		- How is the space going to be distributed between the boxes inside it
+	*/
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 5px dotted red;
+  display: flex;
+  /* height: 400px; /* Only for demonstration purposes. Flex containers should not have a height assigned */
+  /* flex-direction: row; /* row is default value */
+  /* flex-wrap: nowrap; /* nowrap is default value */
+  /* flex-flow combines flex-direction with flex-wrap */
+  flex-flow: row wrap;
+  /* Justify content is used to align items in the main axis (if flex-direction is row, it aligns them horizontally) */
+  justify-content: center; /* felx-start is the default value */
+  /* Align items is used to align items vertially (in the corss axis) */
+  align-items: center; /* stretch is default value. It fills up all the vertical space  */
 }
 li {
-	border: 1px solid #999;
-	margin: 0.5em;
-	padding: 0.5em;
+  /*
+		The li are, in this case, the flex items
+		Properties have more to do with:
+		- Ordering
+		- How wide they are
+		- How they are going to change their size over dimensions
+	*/
+  border: 5px solid #999;
+  margin: 0.5em;
+  padding: 0.5em;
 }
 
-
-
-
-
-
-
+.flex2 {
+  border: 5px dashed blue;
+  order: 2; /* default value is 1. Elements with class .flex2 are going to be positioned after the elements with order 1 */
+  /* flex-basis: 25%; /* NEVER use width property with flex items */
+  flex: 2 1 25%; /* grow (default 0) shrink (default 1) basis (default auto) */
+}

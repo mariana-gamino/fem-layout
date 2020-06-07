@@ -58,3 +58,7 @@ G = flex-grow
 S = flex-shrink
 B = flex-basis
 This is the shorthand for combining flex-grow, flex-shrink, and flex-basis. 
+
+NOTA EXTRA: align-content
+align-content determina el espacio entre las líneas, mientras que align-items determina como los elementos en su conjunto están alineados dentro del contenedor.
+Cuando hay solo una línea, align-content no tiene efecto.
